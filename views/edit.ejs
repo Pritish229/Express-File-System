@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Desc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full h-screen bg-slate-900 p-10">
+        <div class="text-white">
+            <form action="/edit" method="post" class="form">
+                <input type="text" class="block w-full px-5 py-2 rounded-md bg-slate-800 outline-none" value="<%=title.split(',').join(' ').replace('.txt', '') %>" name="title_text"
+                    placeholder="Enter Your Title" />
+                    <input type="hidden" value="<%=title %>" name="old_name">
+                <textarea placeholder="Enter Description"
+                    class="block w-full mt-4 px-5 resize-none py-2 rounded-md bg-slate-800 outline-none"
+                    name="title_desc" id="" cols="30" rows="10"><%=desc %></textarea>
+                <input type="submit" value="Update Task" class="bg-yellow-600 rounded-md mt-5 px-5 py-3 cursor-pointer" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>
